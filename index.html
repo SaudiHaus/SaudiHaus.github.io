@@ -6,49 +6,144 @@
   <title>SaudiHaus</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f7f7f7;
+      color: #111;
+    }
+
+    header {
+      background: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      color: #666;
+    }
+
+    .hero {
+      background: #eaf6ea;
+      margin: 24px;
+      padding: 32px 20px;
+      border-radius: 16px;
       text-align: center;
     }
 
-    .container {
-      padding: 60px 20px;
+    .hero h2 {
+      margin-top: 0;
+      font-size: 28px;
     }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+    .products {
+      padding: 0 24px 40px;
     }
 
-    p {
-      color: #555;
-      margin-bottom: 30px;
+    .products h2 {
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 16px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .price {
+      color: #1c8c3a;
+      font-weight: bold;
+      margin-bottom: 12px;
     }
 
     .btn {
       display: inline-block;
       background: #1c8c3a;
       color: white;
-      padding: 14px 20px;
+      padding: 10px 14px;
       text-decoration: none;
       border-radius: 10px;
-      font-size: 18px;
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
+  <header>
     <h1>SaudiHaus</h1>
     <p>Original Saudi Products in Egypt</p>
+  </header>
 
-    <a class="btn" href="https://wa.me/2010XXXXXXX" target="_blank">
-      اطلب الآن على واتساب
-    </a>
-  </div>
+  <section class="hero">
+    <h2>Imported from Saudi Arabia</h2>
+    <p>Perfumes, bakhoor, personal care, and more.</p>
+  </section>
+
+  <section class="products">
+    <h2>Featured Products</h2>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="Perfume">
+        <div class="card-content">
+          <h3>Royal Oud</h3>
+          <div class="price">650 EGP</div>
+          <a class="btn" href="https://wa.me/201066064010?text=عايز%20أطلب%20Royal%20Oud" target="_blank">اطلب الآن</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1615634262417-98ba3f6d1d2f?auto=format&fit=crop&w=800&q=80" alt="Bakhoor">
+        <div class="card-content">
+          <h3>Luxury Bakhoor</h3>
+          <div class="price">390 EGP</div>
+          <a class="btn" href="https://wa.me/2010XXXXXXX?text=عايز%20أطلب%20Luxury%20Bakhoor" target="_blank">اطلب الآن</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&w=800&q=80" alt="Personal Care">
+        <div class="card-content">
+          <h3>Body Care Set</h3>
+          <div class="price">480 EGP</div>
+          <a class="btn" href="https://wa.me/2010XXXXXXX?text=عايز%20أطلب%20Body%20Care%20Set" target="_blank">اطلب الآن</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
