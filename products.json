@@ -1,17 +1,27 @@
 [
   {
-    "name": "Royal Oud",
-    "price": 650,
-    "image": "https://images.unsplash.com/photo-1594035910387-fea47794261f"
+    "name": "Black Diamond Incense (150 mL)",
+    "price": 2250,
+    "image": "images/Black-Diamond-Incense.webp"
   },
   {
-    "name": "Luxury Bakhoor",
-    "price": 390,
-    "image": "https://images.unsplash.com/photo-1615634262417-98ba3f6d1d2f"
+    "name": "Blue Diamond Aqua (150 ml)",
+    "price": 2250,
+    "image": "images/Blue-Diamond-Aqua.webp"
+  },
+    {
+    "name": "Purple Heart Diamond (150 ml)",
+    "price": 2250,
+    "image": "images/Purple-Heart-Diamond.webp"
+  },
+      {
+    "name": "White Regent Diamond (150 ml)",
+    "price": 2250,
+    "image": "images/White-Regent-Diamond.webp"
   },
   {
-    "name": "Body Care Set",
+    "name": "Nude Coral Diamond (150 ml)",
     "price": 480,
-    "image": "https://images.unsplash.com/photo-1526947425960-945c6e72858f"
+    "image": "images/Nude-Coral-Diamond.webp"
   }
 ]
