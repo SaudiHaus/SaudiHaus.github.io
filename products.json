@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Royal Oud",
+    "price": 650,
+    "image": "https://images.unsplash.com/photo-1594035910387-fea47794261f"
+  },
+  {
+    "name": "Luxury Bakhoor",
+    "price": 390,
+    "image": "https://images.unsplash.com/photo-1615634262417-98ba3f6d1d2f"
+  },
+  {
+    "name": "Body Care Set",
+    "price": 480,
+    "image": "https://images.unsplash.com/photo-1526947425960-945c6e72858f"
+  }
+]
