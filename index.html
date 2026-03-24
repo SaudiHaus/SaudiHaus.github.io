@@ -100,6 +100,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -115,35 +116,41 @@
   <section class="products">
     <h2>Featured Products</h2>
 
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=80" alt="Perfume">
-        <div class="card-content">
-          <h3>Royal Oud</h3>
-          <div class="price">650 EGP</div>
-          <a class="btn" href="https://wa.me/201066064010?text=عايز%20أطلب%20Royal%20Oud" target="_blank">اطلب الآن</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1615634262417-98ba3f6d1d2f?auto=format&fit=crop&w=800&q=80" alt="Bakhoor">
-        <div class="card-content">
-          <h3>Luxury Bakhoor</h3>
-          <div class="price">390 EGP</div>
-          <a class="btn" href="https://wa.me/2010XXXXXXX?text=عايز%20أطلب%20Luxury%20Bakhoor" target="_blank">اطلب الآن</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&w=800&q=80" alt="Personal Care">
-        <div class="card-content">
-          <h3>Body Care Set</h3>
-          <div class="price">480 EGP</div>
-          <a class="btn" href="https://wa.me/2010XXXXXXX?text=عايز%20أطلب%20Body%20Care%20Set" target="_blank">اطلب الآن</a>
-        </div>
-      </div>
-    </div>
+    <!-- المنتجات هتتحط هنا ديناميك -->
+    <div class="grid" id="products"></div>
   </section>
+
+  <script>
+    const phone = "201066064010"; // حط رقمك هنا
+
+    fetch("products.json")
+      .then(res => res.json())
+      .then(products => {
+        const container = document.getElementById("products");
+
+        products.forEach(product => {
+          const message = encodeURIComponent(
+            `عايز أطلب ${product.name} بسعر ${product.price} جنيه`
+          );
+
+          const card = document.createElement("div");
+          card.className = "card";
+
+          card.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <div class="card-content">
+              <h3>${product.name}</h3>
+              <div class="price">${product.price} EGP</div>
+              <a class="btn" href="https://wa.me/${phone}?text=${message}" target="_blank">
+                اطلب الآن
+              </a>
+            </div>
+          `;
+
+          container.appendChild(card);
+        });
+      });
+  </script>
 
 </body>
 </html>
